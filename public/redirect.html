@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Redirecting...</title>
+    <style>
+        
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+        /* body{
+            background-image: url('Image/run-logo.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        } */
+    </style>
+</head>
+<body>
+    <h2>Your Account has been created, and your voter id is <strong><span id="voterId"></span></strong>. Please do not forget it. It'll be used to log you in. Click 
+        <a href="http://localhost:3000/login.html">here</a> to login</h1>
+</body>
+<script>
+    
+    getVoterId()
+
+    async function getVoterId(){
+    var voterId = ''
+    const response = await fetch('/url');
+    const data = await response.json();    
+   
+    voterId = data.voterId  
+    console.log(voterId)
+    document.getElementById("voterId").textContent = voterId  
+    }
+
+</script>
+</html>

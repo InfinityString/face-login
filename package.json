@@ -1,0 +1,15 @@
+{
+  "name": "voting-system",
+  "version": "1.0.2",
+  "description": "For voting system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CMP",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}
